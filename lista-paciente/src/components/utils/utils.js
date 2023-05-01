@@ -23,9 +23,9 @@ export function checkFormatCNS(value) {
   const firstNumber = value[0]
   
   if (firstNumber == "7" || firstNumber == "8" || firstNumber == "9") {
-    return this.validCnsProv(value)
+    return validCnsProv(value)
   } else if (firstNumber == "1" || firstNumber == "2") {
-    return this.validCns(value)
+    return validCns(value)
   } else {
     alert('CNS inválido!')
     return ""

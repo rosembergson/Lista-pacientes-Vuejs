@@ -25,7 +25,7 @@
   
       <fieldset>
         <label for="">CNS</label>
-        <input type="text" v-model="CNS">
+        <input type="text" v-model="CNS" @focusout="handleCNS">
       </fieldset>
   
       <div class="endereco"> Endereco</div>
@@ -74,7 +74,7 @@
 <script>
   import Axios from 'axios';
   import './add-paciente.css'
-  import { formatCPF, formatCep } from '@/components/utils/utils';
+  import { formatCPF, formatCep, checkFormatCNS } from '@/components/utils/utils';
 
   export default {
     props: ['pacienteEdit'],
@@ -94,9 +94,6 @@
         cep: "",
         isCepValid: false
       }
-    },
-    beforeMount() {
-      console.log(this.pacienteEdit)
     },
     methods: {
       formValid() {
@@ -165,6 +162,7 @@
           cidade: this.cidade,
           pais: this.pais,
           cep: this.cep,
+          isShow: false
         }, headers)
         .then(() => {
           this.resetForm()
@@ -195,6 +193,9 @@
       },
       maskCep($event) {
         this.cep = formatCep($event.target.value)
+      },
+      handleCNS($event) {
+        return checkFormatCNS($event.target.value)
       }
     }
   }
