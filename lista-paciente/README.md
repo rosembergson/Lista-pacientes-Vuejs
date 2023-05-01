@@ -22,3 +22,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+Obs: Fiz o crud de uma forma bem simples, devido meu tempo!
+
+Para rodar o servidor basta startar dentro da pasta lista-pacientes com o comando:
+  -> json-server --watch db.json
+
+Rodar o site basta:
+  -> npm run serve

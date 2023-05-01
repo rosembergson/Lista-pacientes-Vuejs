@@ -42,6 +42,12 @@ ul {
   cursor: pointer;
 }
 
+@media screen and (max-width: 400px) {
+  .acoes-pacientes button {
+    width: 100px
+  }
+}
+
 .acoes-pacientes {
   display: flex;
   gap: 20px;
