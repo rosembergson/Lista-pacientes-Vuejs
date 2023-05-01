@@ -1,0 +1,38 @@
+.content-add-paciente {
+  padding: 20px;
+}
+
+form fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+form fieldset label {
+  align-self: flex-start;
+  margin-bottom: 7px;
+  font-size: 12px;
+}
+
+form input {
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid black;
+  padding: 0 15px;
+}
+
+.endereco {
+  margin-top: 40px;
+}
+
+form button {
+  padding: 20px;
+  border: none;
+  border-radius: 32px;
+  width: 200px;
+  text-transform: capitalize;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: 700;
+}
